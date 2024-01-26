@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: dimgray;
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: darkturquoise;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+
+    <p>(number+number) para adição</p>
+    <p>(string+string) para concatenação</p>
+
+    <script>
+        // 1º Resultado - Concatenação 
+        var n1 = window.prompt('Q01 - Digite um número: ') // o window.prompt retorna o valor como uma string
+        var n2 = window.prompt('Q01 - Digite outro número: ') // data type do tipo string
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + s + ', essa é uma concatenação!') // o símbolo + e Concatenação
+        // (number + number) para adição
+        // (string + string) para concatenação
+
+        //
+
+        // 2º Resultado - Soma números inteiros
+        var n1 = Number.parseInt(window.prompt('Q02 - Digite um número inteiro: '))
+        var n2 = Number.parseInt(window.prompt('Q02 - Digite outro número inteiro: '))
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + s + ', esse é o resultado de uma soma de números inteiros!')
+
+        //
+
+        // 3º Resultado - Soma números reais
+        var n1 = Number.parseFloat(window.prompt('Q03 - Digite um número real: '))        
+        var n2 = Number.parseFloat(window.prompt('Q03 - Digite outro número real: '))
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + s + ', esse é o resultado de uma soma de números reais!')
+
+        //
+
+        // 4º Resultado - Soma de ambos (números inteiros e reais)
+        var n1 = Number(window.prompt('Q04 - Digite um número qualquer: '))
+        var n2 = Number(window.prompt('Q04 - Digite outro número aqui: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // formatação do tipo template string
+</script>
+</body>
+</html>
