@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: gray;
+            color: white;
+            font: normal 18pt Arial;
+            padding-left: 10px;
+            line-height: 2.5em;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        strong {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <p id="m3">Mensagem</p>
+    <p name="m4">Mensagem</p>
+    <p class="m5">Mensagem</p>
+
+    <script>
+        //exemplos mencionando árvore DOM
+        window.document.write('Olá Mundo<br>')
+        window.document.write(window.document.charset + '<br>')
+        window.document.write(window.navigator.appName + '<br>')
+        window.document.write('Site: ' + window.document.URL + '<br>')
+
+        //
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] //pode ser usar somente document. ñ e necessário o window. antes
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br>')
+        corpo.style.background = 'black'
+        p1.style.color = 'red'
+
+        document.write(p1.innerText + '<br>') //innerText - mostra somente o texto sem formatações ou propriedades (sem as childs)
+        document.write(p1.innerHTML + '<br>') //innerHTML - mostra o texto com as propriedades inclusas e formatações (com as tags childs)
+        window.alert(p1.innerHTML)
+        window.alert(p1.innerText)
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...' //pode se trocar o texto original
+
+        var p3 = window.document.getElementById('m3')
+        p3.innerText = '- Selecionado por Id'
+
+        var p4 = window.document.getElementsByName('m4')[0]
+        p4.innerText = '- Selecionado por name'
+
+        var p5 = window.document.getElementsByClassName('m5')[0]
+        p5.innerText = '- Selecionado por Class'
+
+        var e = window.document.querySelector('div#msg')
+        e.style.color = 'orange'
+
+        var f = window.document.querySelector('p.m5')
+        f.style.background = 'aqua'
+    </script>
+</body>
+</html>
