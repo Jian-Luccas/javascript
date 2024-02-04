@@ -1,4 +1,4 @@
-function soma(n1=0, n2=0) { // colocando o valor atencipadamente no parâmetro será considerado o mesmo caso não seja passado
+function soma(n1=0, n2=0) { // colocando o valor antecipadamente no parâmetro será considerado o mesmo caso não seja passado
     return n1 + n2
 }
 
